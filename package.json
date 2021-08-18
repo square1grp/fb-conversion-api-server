@@ -1,0 +1,17 @@
+{
+  "name": "fb-conversion-api-server",
+  "version": "1.0.0",
+  "description": "FB Conversion API Server",
+  "main": "server.js",
+  "author": "Emmanuel Lao",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto-js": "^4.1.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "serve": "nodemon server.js"
+  }
+}
