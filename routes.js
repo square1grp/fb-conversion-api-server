@@ -38,6 +38,8 @@ module.exports = (app) => {
         ...(test_event_code ? { test_event_code } : {})
       });
 
+      console.log(payload);
+
       const response = await axios({
         method: 'post',
         url: `https://graph.facebook.com/v11.0/${pixel_id}/events?access_token=${access_token}`,
@@ -49,6 +51,7 @@ module.exports = (app) => {
 
       res.send(response.data);
     } catch (error) {
+      console.log(error.message);
       res.status(500).send(error.message);
     }
   });
